@@ -7,8 +7,6 @@ export default function Home() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" />
-      <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
       <h1>Happy Life, happy coding~</h1>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
       <Image src='/assets/images/135.jpg' width={1920} height={1080} style={{ width: 1920, height: 1080,  }} alt='beautiful scenery' priority/>
