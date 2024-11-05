@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@octokit/rest": "^21.0.2",
+    "fs": "^0.0.1-security",
     "gitalk": "^1.8.0",
     "next": "14.2.15",
+    "path": "^0.12.7",
     "react": "^18",
     "react-dom": "^18"
   },
