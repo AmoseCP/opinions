@@ -57,7 +57,7 @@ useEffect(() => {
         <div className="max-w-7xl container mx-auto px-4 md:flex items-center gap-6 justify-between">
           <div className="flex items-center justify-between md:w-auto w-full">
             <Link href="#" className="py-5 px-2 text-white flex-1 font-bold">
-              <Image height={50} width={50} src="/assets/images/logo.jpg" alt="logo image" style={{ width: 50, height: 50 }}/>
+              <Image height={50} width={50} src="/assets/images/logo.jpg" alt="logo image" style={{ width: 50, height: 50 }} priority/>
             </Link>
             <div className="md:hidden flex items-center">
               <button type="button" className="mobile-menu-button" onClick={toggleMenu}>
@@ -72,7 +72,7 @@ useEffect(() => {
             <Link href="#" className="py-2 px-3 block hover:bg-gray-200 dark:hover:bg-gray-700 rounded">文章</Link>
             <Link href="#" className="py-2 px-3 block hover:bg-gray-200 dark:hover:bg-gray-700 rounded">新闻</Link>
             <Link href="#" className="py-2 px-3 block hover:bg-gray-200 dark:hover:bg-gray-700 rounded">联系我们</Link>
-            <Link href="#" className="py-2 px-3 block hover:bg-gray-200 dark:hover:bg-gray-700 rounded">登录</Link>
+            <Link href="/login" className="py-2 px-3 block hover:bg-gray-200 dark:hover:bg-gray-700 rounded">登录</Link>
             <div className="relative">
               <button type="button" className="dropdown-toggle py-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 rounded flex items-center gap-2" onClick={toggleOthers}>
                 <span className="pointer-events-none select-none">其它</span>
