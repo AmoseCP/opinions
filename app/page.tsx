@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import GitalkComments from './components/GitalkComments'
+import GitalkComments from '../components/GitalkComments'
 import { useState, useEffect } from 'react'
-import PostInfo from './components/posts/PostInfo'
+import PostInfo from '../components/posts/PostInfo'
 import { supabase } from '@/lib/supabase'
 // import* as fs from 'fs'
 // import path from 'path'

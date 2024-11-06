@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabase'
 import { useState } from 'react'
 
 export default function Login() {
-  const [data, setData] = useState<{email: string, password: string}>({email: 'codewithguillaume@gmail.com', password: '86327417Gdu!'})
+  const [data, setData] = useState<{email: string, password: string}>({email: '', password: ''})
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | undefined>(undefined)
   const login = async () => {
@@ -54,8 +54,12 @@ export default function Login() {
     }
   }
 
-  const handleChange = () => {
-
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target
+    setData((prev: any) => ({
+      ...prev,
+      [name]: value,
+    }))
   }
 
   return <div className="bg-gray-100 w-full h-screen py-8">
@@ -63,8 +67,9 @@ export default function Login() {
         <div className='grid'>
           <label>E-mail</label>
           <input
-            type='text'
+            type='email'
             name='email'
+            placeholder='youremail@example.com'
             value={data?.email}
             onChange={handleChange}
           />
@@ -74,6 +79,7 @@ export default function Login() {
           <input
             type='password'
             name='password'
+            placeholder='password'
             value={data?.password}
             onChange={handleChange}
           />

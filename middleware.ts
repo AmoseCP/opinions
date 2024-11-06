@@ -15,7 +15,7 @@ export async function middleware(req: NextRequest) {
   console.log('================= session ====================',  session);
 
   if(!session) {
-    return NextResponse.rewrite(new URL('/login', req.url))
+    return NextResponse.rewrite(new URL('/auth/login', req.url))
   }
 
   return res
@@ -23,6 +23,7 @@ export async function middleware(req: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    // '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)'
   ]
 }
